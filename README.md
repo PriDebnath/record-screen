@@ -8,6 +8,7 @@
 </div>
 
 ## Demo Video
+https://github.com/PriDebnath/record-screen/blob/main/src/assets/final-demo.mp4
 
 https://github.com/PriDebnath/record-screen/blob/main/src/assets/final-demo.mkv
 
