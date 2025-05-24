@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '/dist/' # set the path according to your project
+          path: '/dist' # set the path according to your project
     
       - name: Deploy to GitHub Pages
         id: deployment
