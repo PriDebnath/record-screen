@@ -13,6 +13,27 @@ const Recorder = () => {
     const [isVideoPreviewOpen, setIsVideoPreviewOpen] = useState(false);
     const nodeRef = useRef<HTMLDivElement>(null);
 
+    const isMobile = () => {
+        const result = window.matchMedia("(max-width: 767px)").matches;
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    // check if the device is mobile
+    if (isMobile()) {
+        return (
+            <div className="flex flex-col items-center justify-center w-full h-full">
+                <h3 className="text-2xl font-bold text-center">This app does not support mobile devices</h3>
+                <h2 className="text-gray-500">Please use a desktop or laptop to record your screen.</h2>
+            </div>
+        )
+    }
+
+
     return (
         <div
             ref={nodeRef}
