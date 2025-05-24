@@ -1,23 +1,28 @@
 # Record Screen by Pritam
 
+## Demo Image
+<div style="width:100%;">
+<a href="https://pridebnath.github.io/record-screen/">
+<img src="./src/assets/final-demo.png">
+</a>
+</div>
+
+## Demo Video
+
 https://github.com/PriDebnath/record-screen/blob/main/src/assets/final-demo.mkv
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Set up
+
+#### Install all packages required for the application
+
 ```
+  npm install --legacy-peer-deps
+```
+
+#### Start development server
+
+```
+  npm run dev
+```
+
+Navigate to `hhttp://localhost:5173/record-screen/`.
