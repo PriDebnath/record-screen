@@ -1,4 +1,5 @@
 # Record Screen by Pritam
+## [🔴Live](https://pridebnath.github.io/record-screen)
 
 ## Demo Image
 <div style="width:100%;">
@@ -8,11 +9,9 @@
 </div>
 
 ## Demo Video
-https://github.com/PriDebnath/record-screen/blob/main/src/assets/final-demo.mp4
+https://github.com/user-attachments/assets/21a4ec9a-39dc-460d-a9b3-8f76d20a6bfc
 
-https://github.com/PriDebnath/record-screen/blob/main/src/assets/final-demo.mkv
-
-## Set up
+## Local Set up
 
 #### Install all packages required for the application
 
