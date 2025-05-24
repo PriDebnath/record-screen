@@ -1,4 +1,4 @@
-import { ArrowBigDown, CloudDownload, Download, DownloadCloudIcon, Pause, PauseCircle, PauseCircleIcon, Trash, ChevronDown, ChevronUp, Play, PlayCircle, RefreshCw, StopCircle, X, Delete, HandIcon, Mic, MicOff } from "lucide-react";
+import { Download, PauseCircle, Trash, ChevronDown, ChevronUp, Play, PlayCircle, StopCircle, } from "lucide-react";
 import { useState } from "react";
 import { useReactMediaRecorder } from "react-media-recorder";
 import { useRef } from "react";
