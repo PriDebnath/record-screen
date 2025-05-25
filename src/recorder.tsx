@@ -4,9 +4,8 @@ import { useReactMediaRecorder } from "react-media-recorder";
 import { useRef } from "react";
 
 
-
 const Recorder = () => {
-    const { status, startRecording, pauseRecording, resumeRecording, stopRecording, clearBlobUrl, mediaBlobUrl } =
+    const { status, startRecording, pauseRecording, resumeRecording, stopRecording, clearBlobUrl, mediaBlobUrl, error } =
         useReactMediaRecorder({
             screen: true,
         });
@@ -20,7 +19,6 @@ const Recorder = () => {
         } else {
             return false;
         }
-
     }
 
     // check if the device is mobile
@@ -29,6 +27,15 @@ const Recorder = () => {
             <div className="flex flex-col items-center justify-center w-full h-full">
                 <h3 className="text-2xl font-bold text-center">This app does not support mobile devices</h3>
                 <h2 className="text-gray-500">Please use a desktop or laptop to record your screen.</h2>
+            </div>
+        )
+    }
+
+
+    if (error) {
+        return (
+            <div className="flex flex-col items-center justify-center w-full h-full">
+                <h3 className="text-2xl font-bold text-center">Error: {error}</h3>
             </div>
         )
     }
