@@ -21,6 +21,24 @@ const Recorder = () => {
         }
     }
 
+
+    if (error) {
+        return (
+            <div className="flex flex-col items-center justify-center w-full h-full">
+                <h3 className="text-2xl font-bold text-center">Error: {error}</h3>
+            </div>
+        )
+    }
+    // if the browser does not support screen recording
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
+        return (
+            <div className="flex flex-col items-center justify-center w-full h-full">
+                <h3 className="text-2xl font-bold text-center">Screen Recording Not Supported</h3>
+                <h2 className="text-gray-500">Please use a browser that supports screen recording.</h2>
+            </div>
+        )
+    }
+
     // check if the device is mobile
     if (isMobile()) {
         return (
@@ -32,13 +50,6 @@ const Recorder = () => {
     }
 
 
-    if (error) {
-        return (
-            <div className="flex flex-col items-center justify-center w-full h-full">
-                <h3 className="text-2xl font-bold text-center">Error: {error}</h3>
-            </div>
-        )
-    }
 
 
     return (
