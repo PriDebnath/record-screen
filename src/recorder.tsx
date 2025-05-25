@@ -12,14 +12,6 @@ const Recorder = () => {
     const [isVideoPreviewOpen, setIsVideoPreviewOpen] = useState(false);
     const nodeRef = useRef<HTMLDivElement>(null);
 
-    const isMobile = () => {
-        const result = window.matchMedia("(max-width: 767px)").matches;
-        if (result) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
 
     if (error) {
@@ -30,7 +22,7 @@ const Recorder = () => {
         )
     }
     // if the browser does not support screen recording
-    if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
+    if (!navigator?.mediaDevices || !navigator?.mediaDevices?.getDisplayMedia) {
         return (
             <div className="flex flex-col items-center justify-center w-full h-full">
                 <h3 className="text-2xl font-bold text-center">Screen Recording Not Supported</h3>
@@ -40,6 +32,15 @@ const Recorder = () => {
     }
 
     // check if the device is mobile
+
+    const isMobile = () => {
+        const result = window?.matchMedia("(max-width: 767px)")?.matches;
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     if (isMobile()) {
         return (
             <div className="flex flex-col items-center justify-center w-full h-full">
